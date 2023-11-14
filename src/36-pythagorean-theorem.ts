@@ -9,8 +9,14 @@ export {};
  * You should be able to deduce which function arguments are which sides of a triangle
  * and name them in your function accordingly.
  */
+//good
+const pythagoreanTheorem = (a:number, b:number) => {
+    
+    a = a * a
+    b = b * b
+    return Math.sqrt(a+b)
 
-const pythagoreanTheorem = () => {};
+};
 
 console.log(pythagoreanTheorem(2, 4)); // Expected result: 4.47213595499958
 console.log(pythagoreanTheorem(3, 4)); // Expected result: 5

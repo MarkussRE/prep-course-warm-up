@@ -8,10 +8,15 @@ export {};
  * and recreate the logic yourself.
  */
 
-const map = () => {};
+const map = (numbers:number[]):number[] => {
+ 
+  for(let i = 0; i <numbers.length; i++){
+     numbers[i] = numbers[i] * 2
+  }
+  return numbers
+};
 
 const numbers = [1, 2, 3];
-const doubled = map(numbers, function(number) {
-  return number * 2;
-});
+const doubled = map(numbers)
+
 console.log(doubled); // Expected result: [2, 4, 6]

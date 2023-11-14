@@ -1,5 +1,13 @@
 export {};
+//good
+const specificString = 'Ace';
+// function onlyTheAces(array:string[]) {
+//     return array.filter(specificString);
+// }
 
-function onlyTheAces(arr) {}
+const onlyTheAces:string[]= ["Ace", "King", "Queen", "Jack", "Ace"]
 
-console.log(onlyTheAces(["Ace", "King", "Queen", "Jack", "Ace"])); // Expected result: ['Ace', 'Ace']
+const AceIt: string[] = onlyTheAces.filter(word => word === specificString); // paņem šos specificString 
+
+console.log(AceIt); // trim 
+// console.log(onlyTheAces(["Ace", "King", "Queen", "Jack", "Ace"]).filter((words:string[]) => words === specificString)); // Expected result: ['Ace', 'Ace']

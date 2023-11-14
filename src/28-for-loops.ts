@@ -1,5 +1,5 @@
 export {};
-
+//good
 /**
  * Psst! Want a hint? Try using a for loop for this exercise.
  * If you need some more theory first, here are a few resources that will definitely help:
@@ -9,9 +9,26 @@ export {};
  *  - https://www.youtube.com/watch?v=Kn06785pkJg (JavaScript Loops Made Easy)
 */
 
-function goThroughNumbers(start, end) {}
+function goThroughNumbers(start:number, end:number) {
+    if (start > end) {
+        console.log('inavlid input')      
+    }
+    for (let i = start; i <= end; i++) {
+        // console.log(i);
+        if (i % 2 === 1) {
+            console.log(`${i}-odd`)
+        } else {
+           console.log(`${i}-even`)
+        }
+     }
+        
+        
+}  
+    
+    
 
-goThroughNumbers(3, 7);
+goThroughNumbers(3, 7); 
+
 /* Expected output:
 
     > 3 - odd

@@ -1,14 +1,31 @@
 export {};
+//good
+function add(numOne:number,numTwo:number):number {
+    return numOne + numTwo
+}
 
-function add() {}
+function subtract(numOne:number,numTwo:number):number {
+    return numOne - numTwo
+}
 
-function subtract() {}
+function sum(numbers:number[]):number {
+    let result = 0;
+    for (let num of numbers) {
+        result += num;
+    }
+    return result;
+}
 
-function sum() {}
-
-function multiply() {}
-
-function power() {}
+function multiply(numbers:number[]):number {
+    let result = 1;
+    for (let num of numbers) {
+        result *= num;
+    }
+    return result;
+}
+function power(numOne:number,numTwo:number):number {
+    return Math.pow(numOne, numTwo);
+}
 
 console.log(add(1, 2)); // Expected output: 3
 console.log(subtract(1, 2)); // Expected output: -1

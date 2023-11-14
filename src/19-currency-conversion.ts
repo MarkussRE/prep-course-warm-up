@@ -1,5 +1,5 @@
 export {};
-
+//good
 /**
  * Currency Formatting
  *
@@ -15,9 +15,23 @@ export {};
  */
 
 // You are allowed to change this function
-function convertToUSD(price) {}
-// You are allowed to change this function
-function convertToBRL(price) {}
+// function convertToUSD(price:number):number {
+//     return Number((price * 1.4).toFixed(2)); // Number("123");  returns the number 123
+// }
+// // You are allowed to change this function
+// function convertToBRL(price:number):number {
+//     return (convertToUSD(price) * 5.50)+(convertToUSD(price)*0.01);
+// }
+function fee(price:number):number{
+    return price * 0.01
+}
+function convertToUSD (price: number):number {
+    return price * 1.4 + fee(price)
+}
+function convertToBRL (price:number):number {
+    return price * 5.50 + fee(price)
+}
+
 
 const product = "You don't know JS";
 const price = 12.5;
@@ -25,9 +39,9 @@ const priceInUSD = convertToUSD(price);
 const priceInBRL = convertToBRL(price);
 
 console.log("Product: " + product);
-console.log("Price: $" + priceInUSD);
-console.log("Price: R$" + priceInBRL);
-
+console.log("Price: $" + priceInUSD.toFixed(2));
+console.log("Price: R$" + priceInBRL.toFixed(2)); // 5.50 BRL
+console.log(typeof priceInBRL)
 /* Expected output:
 
     > Product: You don't know JS
